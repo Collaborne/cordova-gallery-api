@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "21.1.2"
 
     defaultConfig {
         applicationId "com.subitolabs.android.cordova.gallerypicker"
@@ -28,5 +27,4 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    compile files('ibs/cordova-2.4.0.jar')
 }
