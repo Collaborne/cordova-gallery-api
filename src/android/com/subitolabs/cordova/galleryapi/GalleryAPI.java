@@ -127,10 +127,10 @@ public class GalleryAPI extends CordovaPlugin {
 
     public ArrayOfObjects getBuckets() throws JSONException {
         Object columns = new Object() {{
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            if (Build.VERSION.SDK_INT >= 29) {
                 put("id", MediaStore.Images.ImageColumns.BUCKET_ID);
             }
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            if (Build.VERSION.SDK_INT >= 29) {
                 put("title", MediaStore.Images.ImageColumns.BUCKET_DISPLAY_NAME);
             }
         }};
@@ -160,7 +160,7 @@ public class GalleryAPI extends CordovaPlugin {
             put("title", MediaStore.Images.ImageColumns.DISPLAY_NAME);
             put("int.height", MediaStore.Images.ImageColumns.HEIGHT);
             put("int.width", MediaStore.Images.ImageColumns.WIDTH);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            if (Build.VERSION.SDK_INT >= 29) {
                 put("int.orientation", MediaStore.Images.ImageColumns.ORIENTATION);
             }
             put("mime_type", MediaStore.Images.ImageColumns.MIME_TYPE);
@@ -191,7 +191,7 @@ public class GalleryAPI extends CordovaPlugin {
     }
 
     private void checkPermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT >= 23) {
             List<String> permissions = new ArrayList<>();
 
             boolean isReadDenied = false;
