@@ -1,6 +1,7 @@
 .DS_Store
 .idea
 .gradle
+*.iml
 
 /demo/platforms
 /demo/plugins
@@ -12,6 +13,7 @@
 
 # Package Files #
 *.jar
+# you can find cordova.jar here - https://github.com/Collaborne/cordova-gallery-api/pull/4#issuecomment-562965740
 *.war
 *.ear
 
